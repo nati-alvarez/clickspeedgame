@@ -1,0 +1,19 @@
+.game_animation {
+	animation: game_animation 1.2s forwards infinite;
+}
+
+@keyframes game_animation{
+	0%{opacity:0;}
+	50%{opacity:10;}
+	100%{opacity:0;}
+}
+
+.game_animation2 {
+	animation: game_animation2 1s  infinite;
+}
+
+@keyframes game_animation2 {
+	0%{opacity:0;}
+	50%{opacity:10;}
+	100%{opacity:0;}
+}

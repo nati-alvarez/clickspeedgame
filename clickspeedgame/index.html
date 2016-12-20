@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Click Speed Game</title>
+		<meta charset="UTF-8">
+		<meta name="description" content="Test you clicking speed and  reaction times with this fun little HTML5 game">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link type="text/css" rel="stylesheet" href="styles/style.css">
+		<link type="text/css" rel="stylesheet" href="styles/game_animations.css">
+		<link href="https://fonts.googleapis.com/css?family=Quicksand|Poiret+One|PT+Sans+Caption" rel="stylesheet">
+	</head>
+
+
+
+	<body>
+
+		<p id="attribution">Created by: <a href="http://www.my-portfolio.getforge.io" style="text-decoration: underline;">Natividad Alvarez</a></p>
+
+
+		<a href="leaderboard.php">
+			<button id="leaderboards">View Leaderboards</button>
+		</a>
+
+
+
+		<p id="score_counter">Your Score: <span class="player_score">0</span> </p>
+
+
+
+		<main id="start_screen">
+			<h1>Reaction Speed Game</h1>
+			<p id="tagline">How fast are you?</p>
+			<button id="game_start">Start Game</button>
+		</main>
+
+
+
+		<section id="game_modes">
+			<h2>Choose your game mode</h2>
+
+
+			<div id="game_mode_container">
+				<div id="game_mode1" class="game_modes"><h3>Game mode 1</h3></div>
+				<div id="game_mode2" class="game_modes"><h3>Game mode 2</h3></div>
+			</div>
+		</section>
+
+
+
+		<section id="game_mode1_directions">
+			<p class="instructions">Click on all the <span class="random_color">*random color*</span> squares</p>
+			<p class="loading">Loading...</p>
+		</section>
+
+
+
+		<section id="game_mode2_directions">
+			<p class="instructions">Click on the <span id="color_or_word">(word/color)</span> <span class="random_color">*random color*</span></p>
+			<p class="loading">Loading...</p>
+		</section>
+
+
+
+		<div id="playing_area">
+			<div class="square" id="square1"></div>
+			<div class="square" id="square2"></div>
+			<div class="square" id="square3"></div>
+			<div id="circle1"></div>
+			
+			<div class="game_text" id="text1">RED</div>
+			<div class="game_text" id="text2">BLUE</div>
+			<div class="game_text" id="text3">GOLD</div>
+			<div class="game_text" id="wrong_text1" style="display:none;"></div>
+		</div>
+
+
+
+
+
+		<section id="game_over_prompt">
+
+			<h2>Game Over</h2>
+			<p> Your Score: <span name="player_score" class="player_score"></span></p>
+			<h3>Add your name on the leaderboards.</h3>
+
+
+			<form id="gamemode1_form" action="new_score.php" method="post">
+				<p>Enter your name: <input name="username"></p>
+				<input type="hidden" id="input2" name="leaderboard_score">
+				<input class="form_button" type="submit" value="Submit">
+			</form>
+
+
+
+			<form id="gamemode2_form" action="new_score2.php" method="post">
+				<p>Enter your name: <input name="username2"></p>
+				<input type="hidden" id="input3" name="leaderboard_score2">
+				<input class="form_button2" type="submit" value="Submit">
+			</form>
+	
+			<b><p style="display:inline-block;">or</p></b>
+			
+			<div id="try_again">
+				<a href="index.html"><button style="background-color:cadetblue; border-radius:0px; border: 2px outset cadetblue;">Try Again</button></a>
+			</div>
+			
+		</section>
+
+
+
+    <div id="buffer">
+
+    </div>
+
+
+
+
+
+		<!-- Scripts -->
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="scripts/animations.js"></script>
+		<script type="text/javascript" src="scripts/gamemode1.js"></script>
+		<script type="text/javascript" src="scripts/gamemode2.js"></script>
+	
+	
+
+	</body>
+
+</html>
+
